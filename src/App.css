@@ -135,3 +135,7 @@ input-placeholder { /* Edge */
     top: 20px;
     transition: 0.2s;
 }
+.skyIn_map{
+ border-radius: 50% !important;
+/* border: 10px double #fec620; */
+}

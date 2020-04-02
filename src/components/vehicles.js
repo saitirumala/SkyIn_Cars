@@ -4,9 +4,14 @@ import vehicles5 from '../images/vehicle5.png';
 import { useMediaQuery } from 'react-responsive';
 // import AvForm from 'availity-reactstrap-validation/lib/AvForm';
 import { AvForm, AvField } from 'availity-reactstrap-validation';
+import StarRating from './star_rating';
+import WOW from 'wowjs'
 class Vehicles extends React.Component {
     state={
 
+    }
+    componentDidMount(){
+        new WOW.WOW().init();
     }
     onChange=(e)=>{
         this.setState({
@@ -14,12 +19,13 @@ class Vehicles extends React.Component {
         })
         console.log('e.target.value',e.target.value)
     }
+
     render() {
 
         return (
             <Col className="bg_color2" sm={12}>
                 <div>
-                    <h2 className="services" >Vehicle Models - Our rental fleet at a glance</h2>
+                    <h2 className="services wow zoomInDown" >Vehicle Models - Our rental fleet at a glance</h2>
                     <Row>
                         <Col sm={2}>
                             <AvForm>
@@ -52,7 +58,10 @@ class Vehicles extends React.Component {
                             </Nav>
                         </Col>
                         <Col sm={6}>
-                            <img src={vehicles5}></img>
+                            
+                            <img className='wow fadeInLeft'  src={vehicles5}></img>
+                          
+                            <StarRating></StarRating>
                         </Col>
                         <Col sm={4}>
                             <p style={{ backgroundColor: '#fec620', padding: '20px', fontFamily: 'inherit', fontSize: '25px', fontWeight: 'bolder', color: 'red' }}> INR 37.40 Rent per day</p>

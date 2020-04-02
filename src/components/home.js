@@ -16,6 +16,7 @@ import { AvForm, AvField } from 'availity-reactstrap-validation';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import _ from 'lodash';
+import WOW from 'wowjs';
 class Home extends React.Component {
     state={
         pickUpstartDate:new Date(),
@@ -25,8 +26,8 @@ class Home extends React.Component {
         data:[],
         value:''
     }
-    componentDidMount = () => {
-       
+    componentDidMount(){
+        new WOW.WOW().init();
     }
     onChange=(e)=>{
         this.setState({
@@ -125,7 +126,7 @@ console.log('pickDate',pickUpstartDate)
                     </Col>
                         <Col xs='12' sm='12' md='4' lg='4'>
 
-                            <Card className='cardbody' body>
+                            <Card className='cardbody wow zoomIn' body>
                                 <CardTitle style={{fontFamily:'initial',fontSize:'30px',fontWeight:'bold'}}><i className="fa fa-car"></i>&nbsp;Advance Booking <i className="fa fa-motorcycle"></i></CardTitle>
                                 <CardBody style={{paddingBottom:'0px'}}>
                                     <AvForm onValidSubmit={this.onClick} >

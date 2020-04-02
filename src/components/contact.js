@@ -4,7 +4,7 @@ import contact from '../images/contact.jpg';
      render(){
          return(
              <div className="bg_color5">
-                <h2 className="services">Contact</h2>
+                <h2 className="services wow zoomInDown">Contact</h2>
                 {/* <img src={contact}></img> */}
              </div>
          )

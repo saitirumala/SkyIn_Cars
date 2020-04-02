@@ -22,8 +22,9 @@ import {
 //   const reversedCoords = coords.map( ll => {
 //     return { lat: ll.lng, lng: ll.lat }
 // });
-const ReactMaps = withScriptjs(withGoogleMap(props => (
+const ReactMaps = withGoogleMap((props) =>
   <GoogleMap
+  
   
     zoom={props.zoom ? props.zoom:6}
     //defaultCenter={new window.google.maps.LatLng(13.0827, 80.2707)}
@@ -142,6 +143,6 @@ const ReactMaps = withScriptjs(withGoogleMap(props => (
                  /> */}
     </div>
   </GoogleMap>
-))
-);
+)
+
 export default ReactMaps;
