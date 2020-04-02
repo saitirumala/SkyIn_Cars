@@ -11,7 +11,11 @@ class Vehicles extends React.Component {
 
     }
     componentDidMount(){
-        new WOW.WOW().init();
+        window.wow = new WOW.WOW({
+            live: false
+        });
+        
+        window.wow.init();
     }
     onChange=(e)=>{
         this.setState({
