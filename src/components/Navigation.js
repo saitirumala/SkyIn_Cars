@@ -22,7 +22,7 @@ const Example = (props) => {
 
   const toggle = () => setIsOpen(!isOpen);
 
-  // const mouseOver= 'true';
+  const mouseOver= 'true';
 //   new WOW.WOW().init();
 
   return (
