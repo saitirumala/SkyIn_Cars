@@ -28,7 +28,7 @@ class Home extends React.Component {
         value:''
     }
     componentDidMount(){
-        new WOW.WOW().init();
+//         new WOW.WOW().init();
     }
     onChange=(e)=>{
         this.setState({
