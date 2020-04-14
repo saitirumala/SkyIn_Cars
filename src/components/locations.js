@@ -28,8 +28,8 @@ class MapApp extends Component {
 
 
     this.hideInfoWindow();
-    window.wow = new WOW.WOW({
-      live: false
+//     window.wow = new WOW.WOW({
+//       live: false
   });
 
   window.wow.init();
