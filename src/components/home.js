@@ -17,6 +17,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import _ from 'lodash';
 import WOW from 'wowjs';
+import location_data from './location.json'
 class Home extends React.Component {
     state={
         pickUpstartDate:new Date(),
@@ -27,7 +28,7 @@ class Home extends React.Component {
         value:''
     }
     componentDidMount(){
-        // new WOW.WOW().init();
+        new WOW.WOW().init();
     }
     onChange=(e)=>{
         this.setState({
@@ -64,11 +65,14 @@ const returnDate = moment(date).format('DD MM YYYY h:mm a')
         })
         }
     render() {
+        // console.log('locationData',location_data)
        const {pickUpstartDate,pickUpsetStartDate,returnstartDate,returnsetStartDate,} = this.state;
         // const [startDate, setStartDate] = useState(new Date());
         const pickDate= new Date(pickUpstartDate)
         const return_Date= new Date(returnstartDate)
-console.log('pickDate',pickUpstartDate)
+        const modelType1 = location_data[2].booking_data[0].vehicle_model1;
+        const modelType2 = location_data[2].booking_data[0].vehicle_model2;
+// console.log('pickDate',pickUpstartDate)
         const responsive = {
             desktop: {
                 breakpoint: { max: 3000, min: 1024 },
@@ -86,6 +90,7 @@ console.log('pickDate',pickUpstartDate)
                 slidesToSlide: 1, // optional, default to 1.
             },
         };
+        console.log('%%%%%%%',this.state.vehicalType)
         return (
             <div className="homebg">
 
@@ -103,7 +108,7 @@ console.log('pickDate',pickUpstartDate)
                                 autoPlaySpeed={3000}
                                 keyBoardControl={true}
                                 customTransition="all .5"
-                                transitionDuration={500}
+                                transitionDuration={1000}
                                 containerClass="carousel-container"
                                 removeArrowOnDeviceType={["tablet", "mobile"]}
                                 deviceType={this.props.deviceType}
@@ -111,14 +116,25 @@ console.log('pickDate',pickUpstartDate)
                                 itemClass="carousel-item-padding-50-px"
                             >
 
-                                <div><img src={vehicle1}></img></div>
-                                <div><img src={bike1}></img></div>
-                                <div><img src={vehicle2}></img> </div>
+                                <div>
+                                   <p className='cotashans'>No Deposit to pay for vehicle rental</p> 
+                                    <img src={vehicle1}></img></div>
+                                <div>
+                                <p className='cotashans'>Best Bike and Car rental service in the city</p>
+                                    <img src={bike1}></img></div>
+                                <div>
+                                <p className='cotashans'>low cost rentals for the best experience</p> 
+                                    
+                                    <img src={vehicle2}></img> </div>
                                 {/* <div><img src={bike2}></img></div> */}
                                 {/* <div><img src={bike5}></img></div> */}
-                                <div><img src={vehicle3}></img> </div>
+                                <div>
+                               
+                                    <img src={vehicle3}></img> </div>
                                 {/* <div><img src={bike3}></img></div> */}
-                                <div><img src={vehicle4}></img> </div>
+                                <div>
+                                <p className='cotashans'>No Deposit to pay for vehicle rental</p> 
+                                    <img src={vehicle4}></img> </div>
                                 <div><img src={bike4}></img> </div>
 
 
@@ -130,22 +146,50 @@ console.log('pickDate',pickUpstartDate)
                                 <CardTitle style={{fontFamily:'initial',fontSize:'30px',fontWeight:'bold'}}><i className="fa fa-car"></i>&nbsp;Advance Booking <i className="fa fa-motorcycle"></i></CardTitle>
                                 <CardBody style={{paddingBottom:'0px'}}>
                                     <AvForm onValidSubmit={this.onClick} >
-                                        <AvField className='inputField'  type="select" name="vehicalType" value={this.state.vehicalType} onChange={this.onChange} required>
-                                            <option>Select Vehicle Type</option>
-                                            <option value='Car'>Car </option>
-                                            <option value='Bike'> Bike </option>
-                                        </AvField>
-                                        <AvField className='inputField' type="select" name="vehicalModel"  value={this.state.vehicalModel} onChange={this.onChange} required>
+                                        
+                                                <AvField className='inputField'  type="select" name="vehicalType" value={this.state.vehicalType} onChange={this.onChange} errorMessage='Vehical type is required' required>
+                                                <option>Select Vehicle Type</option>
+                                                {location_data[1].vehicle.map((data)=>{
+                                            return(
+                                            <option value={data.type}>{data.type}</option>
+                                                )
+                                            })}
+                                            </AvField>
+                                        <AvField className='inputField' type="select" name="vehicalModel"  value={this.state.vehicalModel} onChange={this.onChange}  errorMessage='Vehical model is required' required>
+                                           
                                             <option>Select Vehicle Model</option>
-                                            <option value='Car'> Car </option>
-                                            <option value='Bike'> Bike </option>
+                                            {this.state.vehicalType==='Car'?
+                                        <>
+                                        {
+                                            modelType1.map((data)=>{
+                                                return (
+                                                    <option value={data.model}>{data.model}</option>
+                                                )
+                                            })
+                                        }
+                                        </>:
+                                        <>
+                                        {
+                                            modelType2.map((data)=>{
+                                                return (
+                                                    <option value={data.model}>{data.model}</option>
+                                                )
+                                            })
+                                        } 
+                                        </>   
+                                        }
+                                           
                                         </AvField>
-                                        <AvField className='inputField' type="select" name="location"  value={this.state.location} onChange={this.onChange} required>
+                                        <AvField className='inputField' type="select" name="location"  value={this.state.location} onChange={this.onChange}  errorMessage='Location is required' required>
                                             <option>Select Branch Location</option>
-                                            <option value='Car'> Car </option>
-                                            <option value='Bike'> Bike </option>
+                                            <option>Select Vehicle Type</option>
+                                                {location_data[0].location.map((data)=>{
+                                            return(
+                                            <option key={data.id} value={data.id}>{data.location}</option>
+                                                )
+                                            })}
                                         </AvField>
-                                        <Input className='inputField' type='tel' placeholder=' Customer Name' name="name" value={this.state.name} onChange={this.onChange}></Input>
+                                        <Input className='inputField' type='tel' placeholder='Customer Name' name="name" value={this.state.name} onChange={this.onChange}></Input>
                                         <Input style={{marginTop:'13px'}} className='inputField' type='tel' placeholder=' Phone Number'  value={this.state.phone} name="phone" onChange={this.onChange}></Input>
                                         <Label style={{textAlign:'center',color:'#495057'}}><i className="fas fa-calendar-day"></i> Pick Up </Label>
                                         <DatePicker

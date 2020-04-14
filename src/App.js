@@ -18,6 +18,7 @@ function App() {
           id='section1'
           >
       <Home ></Home>
+      <div class="arrow-down"></div>
       </section>
       <section
           title='section2'
@@ -41,7 +42,7 @@ function App() {
           title='section5'
           id='section5'
           >
-      {/* <Locations></Locations> */}
+      <Locations></Locations>
       </section>
       <section
           title='section6'

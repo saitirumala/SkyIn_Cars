@@ -4,7 +4,7 @@ import StarRatings from 'react-star-ratings';
  
 export default class Foo extends React.Component {
     state={
-        rating:0,
+        rating:5,
     }
     changeRating=( e,newRating, name )=> {
         console.log(e,newRating,name)

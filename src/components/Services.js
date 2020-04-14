@@ -3,12 +3,13 @@ import { Col, Row, Card, CardBody, CardTitle, CardText, Button, Label, Input } f
 import WOW from 'wowjs';
 class Services extends React.Component {
     componentDidMount(){
-        // new WOW.WOW().init();
+        new WOW.WOW().init();
     }
     render() {
         return (
             <Col className="bg_color1" sm={12}>
                 <h2 className="services wow bounceInDown">Services</h2>
+                <span className="underline">&nbsp;</span>
                 <Row>
                     <Col className='wow slideInLeft' sm="6">
                         <Card className='card_Body ' body>
@@ -19,9 +20,18 @@ class Services extends React.Component {
                     </Col>
                     <Col sm="6" className='wow slideInRight'>
                         <Card className='card_Body ' body>
-                            <CardTitle className='service_title'><sapn className='plus'>+&nbsp;</sapn>Special rates on car booking</CardTitle>
-                            <CardText>With supporting text below as a natural lead-in to additional content.Lorem ipsum dolor sit amet, 
-                                consetetur sadipscing elitr, sed nonumy eirmod tempor invidunt ut labore et dolore magnaed aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.</CardText>
+                        <CardTitle className='service_title'><sapn className='plus'>+&nbsp;</sapn>
+Documents Required To Take CAR</CardTitle>
+                            <CardText>
+                                <ul style={{textAlign:'initial'}}>
+                                    <li>Original Driving License</li>
+                                    <li>Aadhar Card</li>
+                                    <li>Pan Card</li>
+                                    <li>Age below 30 Years Collage ID Card</li>
+                                    <li>6 members contacts [Father,Mother,Wife,Friend ....etc] COMPULSORY</li>
+                                </ul>
+              
+              </CardText>
                         </Card>
                     </Col>
                 </Row>

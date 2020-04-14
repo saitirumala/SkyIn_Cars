@@ -1,0 +1,82 @@
+[
+    {
+      "location":[
+          {
+            "location":"Tirupati",
+            "id":"1" 
+          },
+          {
+            "location":"Vijayawada",
+            "id":"2"
+          }
+      ]  
+    },
+    {
+        "vehicle":[
+            {
+              "type":"Car",
+              "id":"1" 
+            },
+            {
+              "type":"Bike",
+              "id":"2"
+            }
+        ]  
+      },
+    {
+        "location":"Tirupati",
+        "id":"1",
+        "booking_data":[
+            {
+             "vehicle_type":"Car",
+             "vehicle_model1":
+             [
+              {"model": "Audi"},
+              {"model":"Suzuki"},
+             { "model": "Toyota Liva"},
+             { "model": "Honda city"},
+              {"model": "Benz"},
+              {"model":"Bmw"}
+            ],
+            "vehicle_model2":
+            [{"model":"Fz s v3"},
+              {"model":"Pulsor 150"},
+              {"model":"Activa"},
+              {"model": "Vespa"},
+              {"model":"MT 15"},
+              {"model":"RE Clasic 350 "}
+           ],
+           "location":["Tirupati","Vijayawada"]
+
+            }
+        ]
+    }
+    ,
+    {
+        "location":"Vijayawada",
+        "id":"2",
+        "booking_data":[
+            {
+             "vehicle_type":"Car",
+             "vehicle_model1":
+             ["Audi",
+             "Suzuki",
+             "Toyota Liva",
+             "Honda city",
+             "Benz",
+             "Bmw"
+            ],
+            "vehicle_model2":
+            ["Fz s v3",
+            "Pulsor 150",
+            "Activa",
+            "Vespa",
+            "MT 15",
+            "RE Clasic 350 "
+           ],
+           "location":["Tirupati","Vijayawada"]
+
+            }
+        ]
+    }
+]

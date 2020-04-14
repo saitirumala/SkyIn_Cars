@@ -5,6 +5,7 @@ import contact from '../images/contact.jpg';
          return(
              <div className="bg_color5">
                 <h2 className="services wow zoomInDown">Contact</h2>
+                <span className="underline">&nbsp;</span>
                 {/* <img src={contact}></img> */}
              </div>
          )

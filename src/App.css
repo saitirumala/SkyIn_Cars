@@ -43,7 +43,7 @@
   cursor: pointer;
 }
 .homebg{
-  background-color:#fec620;
+  background-color:#ffbf00;
   padding-top: 180px;
 }
 .navcol{
@@ -74,6 +74,7 @@ input-placeholder { /* Edge */
 }
 .cardbody{
   /* background: transparent !important; */
+  border-radius: 0mm !important;
   border: 0px solid black !important;
   background-color:white !important;
   padding: 0px !important;
@@ -84,9 +85,13 @@ input-placeholder { /* Edge */
 .services{
   font-size: 40px;
   padding: 30px;
-  font-family: initial;
+  font-weight: 900;
+  padding-top: 50px;
+  font-family: 'Times New Roman', Times, serif;
   /* text-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
-  text-shadow: 2px 2px 4px #000000;
+  /* text-shadow: 2px 2px 4px #000000; */
+  padding-bottom: 1px;
+  color:#726e6f;
 }
 .serviceBody{
   background-color: coral;
@@ -97,6 +102,8 @@ input-placeholder { /* Edge */
   background-color:#f0f5f5 !important;
   padding: 0px !important;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  height: 200px;
+  border-radius: 0mm !important;
 }
 .plus{
   font-size: 40px;
@@ -108,7 +115,7 @@ input-placeholder { /* Edge */
   font-size:30px;
   color: #138D75;
   font-family: 'initial';
-  background-color:#fec620 ;
+  background-color:#ffbf00 ;
 }
 .navTitles{
   /* border:1px solid silver !important; */
@@ -137,5 +144,60 @@ input-placeholder { /* Edge */
 }
 .skyIn_map{
  border-radius: 50% !important;
-/* border: 10px double #fec620; */
+/* border: 10px double #ffbf00; */
+}
+.review_title{
+  font-weight: bold;
+  font-size:30px;
+  color: #ffbf00;
+  font-family: 'initial';
+  /* background-color:#ffbf00 ; */
+}
+.review_card_Body{
+  background-color:#f0f5f5 !important;
+  padding: 20px !important;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin:40px !important;
+  cursor: pointer;
+
+}
+.vehicleType{
+  font-family: 'initial';
+  text-align: initial;
+  font-size: 20px;
+  background-color: #e3e2e2;
+  border-bottom: 1px solid white;
+  cursor: pointer;
+  padding: 35px;
+}
+.cotashans{
+  color: #efe9e9;
+  font-size: 40px;
+  /* font-family: initial; */
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: justify;
+
+}
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 37px solid transparent;
+  border-right: 37px solid transparent;
+  border-top: 37px solid #ffbf00;
+  margin: 0 auto;
+}
+.underline {
+  height: 4px;
+  width: 135px;
+  display: block;
+  background-color: #ffbf00;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+.vehicleType:active{
+  background-color: #ffe599;
+}
+.vehicleType:hover{
+  background-color: silver;
 }

@@ -4,7 +4,8 @@ import ReactMaps from "./reactMaps";
 // import places from "./places.json";
 // import PlacesAutocomplete from 'react-places-autocomplete';
 import { geocodeByAddress, getLatLng } from 'react-places-autocomplete';
-import { Col,Row } from 'reactstrap'
+import { Col,Row } from 'reactstrap';
+import WOW from 'wowjs';
 
 class MapApp extends Component {
   constructor(props) {
@@ -21,11 +22,17 @@ class MapApp extends Component {
       langitude: ''
     };
   }
+
   componentDidMount() {
     const google = window.google
 
 
     this.hideInfoWindow();
+    window.wow = new WOW.WOW({
+      live: false
+  });
+
+  window.wow.init();
   }
 
   hideInfoWindow = () => {
@@ -74,10 +81,11 @@ class MapApp extends Component {
     // console.log('ramesh',this.state.directions)
     return (
       <div className="bg_color4" >
-        <h2 className="services"> Locations </h2>
+        <h2 className="services wow zoomInDown"> Locations </h2>
+        <span className="underline">&nbsp;</span>
         <Row>
           <Col sm={1}></Col>
-          <Col className="skyIn_map" sm={10}>
+          <Col className="skyIn_map wow fadeInUp" sm={10}>
             <ReactMaps
              
               directions={this.state.directions}
