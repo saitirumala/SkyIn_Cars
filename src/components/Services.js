@@ -14,7 +14,7 @@ class Services extends React.Component {
                     <Col className='wow slideInLeft' sm="6">
                         <Card className='card_Body ' body>
                             <CardTitle className='service_title'><sapn className='plus'>+&nbsp;</sapn>Mobile Phone Reservation</CardTitle>
-                            <CardText>With supporting text below as a natural lead-in to additional content.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed nonumy eirmod tempor invidunt ut labore et dolore magnaed aliquyam erat, 
+                            <CardText>With supporting text below as natural lead-in to additional content.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed nonumy eirmod tempor invidunt ut labore et dolore magnaed aliquyam erat, 
                                 sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.</CardText>
                         </Card>
                     </Col>
