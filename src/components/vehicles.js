@@ -17,11 +17,11 @@ class Vehicles extends React.Component {
         vehicalType:'Car'
     }
     componentDidMount() {
-        window.wow = new WOW.WOW({
-            live: false
-        });
+//         window.wow = new WOW.WOW({
+//             live: false
+//         });
 
-        window.wow.init();
+//         window.wow.init();
     }
     onChange = (e) => {
         this.setState({

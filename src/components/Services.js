@@ -3,7 +3,7 @@ import { Col, Row, Card, CardBody, CardTitle, CardText, Button, Label, Input } f
 import WOW from 'wowjs';
 class Services extends React.Component {
     componentDidMount(){
-        new WOW.WOW().init();
+//         new WOW.WOW().init();
     }
     render() {
         return (

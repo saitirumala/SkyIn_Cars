@@ -22,8 +22,8 @@ const Example = (props) => {
 
   const toggle = () => setIsOpen(!isOpen);
 
-  // const mouseOver= 'true';
-  new WOW.WOW().init();
+  const mouseOver= 'true';
+//   new WOW.WOW().init();
 
   return (
     <div>
