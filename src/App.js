@@ -42,7 +42,7 @@ function App() {
           title='section5'
           id='section5'
           >
-      <Locations></Locations>
+      {/* <Locations></Locations> */}
       </section>
       <section
           title='section6'
