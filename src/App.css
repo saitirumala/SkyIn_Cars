@@ -99,11 +99,12 @@ input-placeholder { /* Edge */
   /* margin: 20px; */
 }
 .card_Body{
-  background-color:#f0f5f5 !important;
+  background-color:#ededed !important;
   padding: 0px !important;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
   height: 200px;
   border-radius: 0mm !important;
+  border: 0mm !important;
 }
 .plus{
   font-size: 40px;
@@ -200,4 +201,39 @@ input-placeholder { /* Edge */
 }
 .vehicleType:hover{
   background-color: silver;
+}
+.daterange{
+  display: flex;
+    border: 2px solid #efefef !important;
+    width: 350px;
+    height: 35px;
+    border-radius: 3px;
+    margin-top: 13px;
+}
+.react-daterange-picker__wrapper{
+  border:0px !important;
+  padding-left: 40px !important;
+}
+.icon{
+  height: 50px;
+  width:50px;
+  display: flex;
+  float:left;
+}
+.helpLineCard{
+  padding: 0px !important;
+  background-color: #ededed !important;
+  border-radius: 0px !important;
+  border:0px !important;
+}
+.fb{
+  height: 40px;
+  width:40px;
+  display: flex;
+  float:left;
+}
+.cotactCard{
+  background-color: #ededed !important;
+  border-radius: 0px !important;
+  border:0px !important;
 }

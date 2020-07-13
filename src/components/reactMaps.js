@@ -26,7 +26,7 @@ const ReactMaps = withGoogleMap((props) =>
   <GoogleMap
   
   
-    zoom={props.zoom ? props.zoom:6}
+    zoom={props.zoom ? props.zoom:5}
     //defaultCenter={new window.google.maps.LatLng(13.0827, 80.2707)}
     center={new window.google.maps.LatLng(props.LatLng.lat || 13.6251676, props.LatLng.lng || 79.4238111)}
   >

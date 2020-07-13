@@ -17,49 +17,58 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import _ from 'lodash';
 import WOW from 'wowjs';
-import location_data from './location.json'
+import location_data from './location.json';
+import DateRangePicker from '@wojtekmaj/react-daterange-picker';
+import { toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 class Home extends React.Component {
     state={
         pickUpstartDate:new Date(),
         pickUpsetStartDate:new Date(),
         returnstartDate:new Date(),
         returnsetStartDate:new Date(),
+        date:[new Date(), new Date()],
         data:[],
         value:''
     }
     componentDidMount(){
+        toast('succ');
         new WOW.WOW().init();
     }
+    dateChange = date => this.setState({ date })
     onChange=(e)=>{
         this.setState({
             [e.target.name]:e.target.value
         })
-        console.log('e.target.value',e.target.value)
+        // console.log('e.target.value',e.target.value)
     }
     onClick =(e)=>{
+        
 e.preventDefault();
-console.log('value',this.state.value)
- this.state.data.push([{'vehicle_type':this.state.vehicalType,'vehicle_model':this.state.vehicalModel,'vehicle_':this.state.location,
-'name':this.state.name,'phone':this.state.phone,'pickUpDate':this.state.pickUpstartDate,'returnDate':this.state.returnstartDate
+// console.log('value',this.state.value)
+
+ this.state.data.push([{'vehicle_type':this.state.vehicalType,'vehicle_model':this.state.vehicalModel,'vehicle_location':this.state.location,
+'name':this.state.name,'phone':this.state.phone,'booking_dates':this.state.date
 }])
+
 // this.setState({
 //     data:[...this.state.data]
 // })
-console.log('data',this.state.data[0]) 
+// console.log('data',this.state.data[0]) 
 this.setState({
     
 })
     }
     onPickUpDate=(date)=>{
         const pickUpDate = moment(date).format('DD MM YYYY h:mm a')
-console.log('date',pickUpDate)
+// console.log('date',pickUpDate)
 this.setState({
     pickUpstartDate :pickUpDate
 })
     }
     onReturnDate=(date)=>{
 const returnDate = moment(date).format('DD MM YYYY h:mm a')
-        console.log('date',returnDate)
+        // console.log('date',returnDate)
         this.setState({
             returnstartDate:returnDate
         })
@@ -85,12 +94,13 @@ const returnDate = moment(date).format('DD MM YYYY h:mm a')
                 slidesToSlide: 1, // optional, default to 1.
             },
             mobile: {
-                breakpoint: { max: 464, min: 0 },
+                breakpoint: { max: 380, min: 100 },
+                
                 items: 1,
                 slidesToSlide: 1, // optional, default to 1.
             },
         };
-        console.log('%%%%%%%',this.state.vehicalType)
+        // console.log('%%%%%%%',this.state.vehicalType)
         return (
             <div className="homebg">
 
@@ -98,8 +108,8 @@ const returnDate = moment(date).format('DD MM YYYY h:mm a')
                     <Row>
                         <Col xs='12' sm='12' md='8' lg='8'>
                             <Carousel
-                                swipeable={false}
-                                draggable={false}
+                                swipeable={ true}
+                                draggable={true}
                                 showDots={true}
                                 responsive={responsive}
                                 ssr={true} // means to render carousel on server-side.
@@ -185,13 +195,13 @@ const returnDate = moment(date).format('DD MM YYYY h:mm a')
                                             <option>Select Vehicle Type</option>
                                                 {location_data[0].location.map((data)=>{
                                             return(
-                                            <option key={data.id} value={data.id}>{data.location}</option>
+                                            <option key={data.id} value={data.location}>{data.location}</option>
                                                 )
                                             })}
                                         </AvField>
                                         <Input className='inputField' type='tel' placeholder='Customer Name' name="name" value={this.state.name} onChange={this.onChange}></Input>
                                         <Input style={{marginTop:'13px'}} className='inputField' type='tel' placeholder=' Phone Number'  value={this.state.phone} name="phone" onChange={this.onChange}></Input>
-                                        <Label style={{textAlign:'center',color:'#495057'}}><i className="fas fa-calendar-day"></i> Pick Up </Label>
+                                        {/* <Label style={{textAlign:'center',color:'#495057'}}><i className="fas fa-calendar-day"></i> Pick Up </Label>
                                         <DatePicker
                                             className="datepicker"
                                             name='pickUpstartDate'
@@ -215,6 +225,11 @@ const returnDate = moment(date).format('DD MM YYYY h:mm a')
                                             timeCaption="time"
                                             dateFormat="MMMM d, yyyy h:mm aa"
                               
+                                        /> */}
+                                        <DateRangePicker
+                                        className='daterange'
+                                        onChange={this.dateChange}
+                                        value={this.state.date}
                                         />
                                         <Button style={{margin:'20px'}} type='submit' > Conform Booking </Button>
                                     </AvForm>

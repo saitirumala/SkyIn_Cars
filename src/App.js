@@ -36,13 +36,13 @@ function App() {
           title='section4'
           id='section4'
           >
-      <Blog></Blog>
+      {/* <Blog></Blog> */}
       </section>
       <section
           title='section5'
           id='section5'
           >
-      <Locations></Locations>
+      {/* <Locations></Locations> */}
       </section>
       <section
           title='section6'

@@ -78,7 +78,7 @@ const Example = (props) => {
               </Link>
               {/* <NavLink onClick={()=>history.push('/calculator')} >Calculator</NavLink> */}
             </NavItem>
-            <NavItem className='cursor navcol'>
+            {/* <NavItem className='cursor navcol'>
               <Link
               className='navTitles'
                 activeClass="active"
@@ -90,8 +90,7 @@ const Example = (props) => {
               ><i className="fa fa-th-large"></i>&nbsp;
                 Blog
               </Link>
-              {/* <NavLink onClick={()=>history.push('/form')}>Form</NavLink> */}
-            </NavItem>
+            </NavItem> */}
             <NavItem className='cursor navcol'>
               <Link
                className='navTitles'
