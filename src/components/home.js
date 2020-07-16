@@ -66,7 +66,7 @@ const returnDate=this.state.date[1]
 // console.log('data',this.state.data[0]) 
 this.setState({
     formData:this.state.data
-},()=>{ console.log('data',this.state.formData)})
+},()=>{ console.log('booking data',this.state.formData)})
     }
     onPickUpDate=(date)=>{
         const pickUpDate = moment(date).format('DD MM YYYY h:mm a')
@@ -77,7 +77,7 @@ this.setState({
     }
     onReturnDate=(date)=>{
 const returnDate = moment(date).format('DD MM YYYY h:mm a')
-        // console.log('date',returnDate)
+        
         this.setState({
             returnstartDate:returnDate
         })
@@ -86,7 +86,7 @@ const returnDate = moment(date).format('DD MM YYYY h:mm a')
             this.setState({ pickUp_time })
         } 
         onReturnTimeChange = (return_time) =>{
-            // console.log('ertyu',return_time)
+          
             this.setState({ return_time })
         }
     render() {
