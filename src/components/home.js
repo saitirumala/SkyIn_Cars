@@ -112,7 +112,7 @@ const returnDate = moment(date).format('DD MM YYYY h:mm a')
                 slidesToSlide: 1, // optional, default to 1.
             },
             mobile: {
-                breakpoint: { max: 200, min: 40 },
+                breakpoint: { max: 425, min: 200 },
                 
                 items: 1,
                 slidesToSlide: 1, // optional, default to 1.
