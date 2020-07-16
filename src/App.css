@@ -237,3 +237,14 @@ input-placeholder { /* Edge */
   border-radius: 0px !important;
   border:0px !important;
 }
+@media(max-width:320px){
+  .daterange{
+    width:250px;
+    /* padding-left:0px; */
+  }
+  .react-daterange-picker__wrapper{
+    border:0px !important;
+    padding-left: 0px !important;
+  }
+ 
+}

@@ -105,7 +105,7 @@ class Vehicles extends React.Component {
                         </Col>
                         <Col sm={6}>
 
-                            <img className='wow fadeInLeft' src={vehicles5}></img>
+                            <img className='wow fadeInLeft imgg'  src={vehicles5}></img>
                             {/* <img src='../images/vehicle5.png'></img> */}
                             <p style={{ textAlign: 'initial', fontWeight: 'bold', fontSize: '20px' }}>Customer Reviews</p>
                             <Carousel
@@ -134,8 +134,8 @@ class Vehicles extends React.Component {
                                         //   rating={this.state.rating}
                                         starRatedColor="#fec620"
                                         rating={data.rating}
-                                        starDimension="40px"
-                                        starSpacing="15px"
+                                        starDimension="35px"
+                                        starSpacing="10px"
                                         changeRating={(e) => this.changeRating(e)}
                                         numberOfStars={5}
                                         name='rating'

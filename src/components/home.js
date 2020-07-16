@@ -112,7 +112,7 @@ const returnDate = moment(date).format('DD MM YYYY h:mm a')
                 slidesToSlide: 1, // optional, default to 1.
             },
             mobile: {
-                breakpoint: { max: 380, min: 100 },
+                breakpoint: { max: 200, min: 40 },
                 
                 items: 1,
                 slidesToSlide: 1, // optional, default to 1.
@@ -120,7 +120,7 @@ const returnDate = moment(date).format('DD MM YYYY h:mm a')
         };
         // console.log('%%%%%%%',this.state.vehicalType)
         return (
-            <div className="homebg">
+            <div className="homebg ">
 
                 <Col>
                     <Row>
@@ -146,24 +146,24 @@ const returnDate = moment(date).format('DD MM YYYY h:mm a')
 
                                 <div>
                                    <p className='cotashans'>No Deposit to pay for vehicle rental</p> 
-                                    <img src={vehicle1}></img></div>
+                                    <img className='imgg' src={vehicle1}></img></div>
                                 <div>
                                 <p className='cotashans'>Best Bike and Car rental service in the city</p>
-                                    <img src={bike1}></img></div>
+                                    <img className='imgg' src={bike1}></img></div>
                                 <div>
                                 <p className='cotashans'>low cost rentals for the best experience</p> 
                                     
-                                    <img src={vehicle2}></img> </div>
+                                    <img className='imgg' src={vehicle2}></img> </div>
                                 {/* <div><img src={bike2}></img></div> */}
                                 {/* <div><img src={bike5}></img></div> */}
                                 <div>
                                
-                                    <img src={vehicle3}></img> </div>
+                                    <img className='imgg' src={vehicle3}></img> </div>
                                 {/* <div><img src={bike3}></img></div> */}
                                 <div>
                                 <p className='cotashans'>No Deposit to pay for vehicle rental</p> 
-                                    <img src={vehicle4}></img> </div>
-                                <div><img src={bike4}></img> </div>
+                                    <img className='imgg' src={vehicle4}></img> </div>
+                                <div><img className='imgg' src={bike4}></img> </div>
 
 
                             </Carousel>
@@ -244,11 +244,14 @@ const returnDate = moment(date).format('DD MM YYYY h:mm a')
                                             dateFormat="MMMM d, yyyy h:mm aa"
                               
                                         /> */}
+                                    
                                         <DateRangePicker
                                         className='daterange'
                                         onChange={this.dateChange}
                                         value={this.state.date}
                                         />
+                                      
+                                        
                                         <Row>
                                             <Col sm={6}>
                                             <Label>Pick Up Time</Label>

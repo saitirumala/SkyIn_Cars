@@ -24,9 +24,14 @@ Tirupathi-517501.</p>
 <p style={{textAlign:'justify'}}><span style={{fontWeight:'bold'}}>Phone :</span> +91 9494444182</p>
 <div>
     {/* <img src=''></img> */}
-<img className=" icon wow bounceInDown" src={insta_logo} ></img><a style={{display:'flex',paddingTop:'10px',paddingLeft:'10px',float:'left',marginRight:'20px'}} href='https://instagram.com/skyin_cars?igshid=1kzg8l94z1th8'>skyin_cars</a>
-<img className=" fb wow bounceInDown" src={fb} ></img><a style={{display:'flex',paddingTop:'10px',paddingLeft:'10px',marginRight:'20px',float:'left'}} href='https://www.facebook.com/skyin_cars-2327401060804955/'>skyin_cars</a>
-<img className=" fb wow bounceInDown" src={gmail} ></img><a style={{display:'flex',paddingTop:'10px',paddingLeft:'10px'}} href='https://www.facebook.com/skyin_cars-2327401060804955/'>skyinselfdrive@gmail.com</a>
+    <Row>
+        <Col sm={4}><img className=" icon wow bounceInDown" src={insta_logo} ></img><a style={{display:'flex',paddingTop:'10px',paddingLeft:'10px',float:'left',marginRight:'20px'}} href='https://instagram.com/skyin_cars?igshid=1kzg8l94z1th8'>skyin_cars</a></Col>
+        <Col sm={4}><img className=" fb wow bounceInDown" src={fb} ></img><a style={{display:'flex',paddingTop:'10px',paddingLeft:'10px',marginRight:'20px',float:'left'}} href='https://www.facebook.com/skyin_cars-2327401060804955/'>skyin_cars</a></Col>
+        <Col sm={4}><img className=" fb wow bounceInDown" src={gmail} ></img><a style={{display:'flex',paddingTop:'10px',paddingLeft:'10px'}} href='https://www.facebook.com/skyin_cars-2327401060804955/'>skyinselfdrive@gmail.com</a></Col>
+    </Row>
+
+
+
 </div>
                             </CardText>
 
