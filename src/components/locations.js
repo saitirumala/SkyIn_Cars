@@ -80,6 +80,7 @@ class MapApp extends Component {
   render() {
     // console.log('ramesh',this.state.directions)
     return (
+      <Col>
       <div className="bg_color4" >
         <h2 className="services wow zoomInDown"> Locations </h2>
         <span className="underline">&nbsp;</span>
@@ -113,6 +114,7 @@ class MapApp extends Component {
 
 
       </div>
+      </Col>
     );
   }
 }
