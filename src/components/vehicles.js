@@ -137,7 +137,7 @@ class Vehicles extends React.Component {
                                         starDimension="40px"
                                         starSpacing="15px"
                                         changeRating={(e) => this.changeRating(e)}
-                                        numberOfStars={6}
+                                        numberOfStars={5}
                                         name='rating'
                                     />
                                         <Card className='review_card_Body wow zoomIn' body>

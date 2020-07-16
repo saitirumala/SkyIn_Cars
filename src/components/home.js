@@ -21,6 +21,8 @@ import location_data from './location.json';
 import DateRangePicker from '@wojtekmaj/react-daterange-picker';
 import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import TimePicker from 'react-time-picker';
+
 class Home extends React.Component {
     state={
         pickUpstartDate:new Date(),
@@ -29,9 +31,14 @@ class Home extends React.Component {
         returnsetStartDate:new Date(),
         date:[new Date(), new Date()],
         data:[],
-        value:''
+        pickUp_time:moment(new Date()).format('h:mm'),
+        return_time:moment(new Date()).format('h:mm'),
+        value:'',
+
+        formData:[]
     }
     componentDidMount(){
+        
         toast('succ');
         new WOW.WOW().init();
     }
@@ -45,10 +52,12 @@ class Home extends React.Component {
     onClick =(e)=>{
         
 e.preventDefault();
-// console.log('value',this.state.value)
+const pickDate=this.state.date[0]
+const returnDate=this.state.date[1]
+
 
  this.state.data.push([{'vehicle_type':this.state.vehicalType,'vehicle_model':this.state.vehicalModel,'vehicle_location':this.state.location,
-'name':this.state.name,'phone':this.state.phone,'booking_dates':this.state.date
+'name':this.state.name,'phone':this.state.phone,'pick_up_date':pickDate,'return_date':returnDate,pickUp_time:this.state.pickUp_time,return_time:this.state.return_time
 }])
 
 // this.setState({
@@ -56,8 +65,8 @@ e.preventDefault();
 // })
 // console.log('data',this.state.data[0]) 
 this.setState({
-    
-})
+    formData:this.state.data
+},()=>{ console.log('data',this.state.formData)})
     }
     onPickUpDate=(date)=>{
         const pickUpDate = moment(date).format('DD MM YYYY h:mm a')
@@ -73,7 +82,16 @@ const returnDate = moment(date).format('DD MM YYYY h:mm a')
             returnstartDate:returnDate
         })
         }
+        onPickTimeChange = (pickUp_time )=>{
+            this.setState({ pickUp_time })
+        } 
+        onReturnTimeChange = (return_time) =>{
+            // console.log('ertyu',return_time)
+            this.setState({ return_time })
+        }
     render() {
+        // alert(moment(this.state.return_time))
+        // console.log('value',this.state.date[0])
         // console.log('locationData',location_data)
        const {pickUpstartDate,pickUpsetStartDate,returnstartDate,returnsetStartDate,} = this.state;
         // const [startDate, setStartDate] = useState(new Date());
@@ -231,6 +249,25 @@ const returnDate = moment(date).format('DD MM YYYY h:mm a')
                                         onChange={this.dateChange}
                                         value={this.state.date}
                                         />
+                                        <Row>
+                                            <Col sm={6}>
+                                            <Label>Pick Up Time</Label>
+                                                 <TimePicker
+                                            onChange={this.onPickTimeChange}
+                                            format='h:mm aa'
+                                            value={this.state.pickUp_time}
+                                        /></Col>
+                                        <Col sm={6}>
+                                            <Label>Return Time</Label>
+                                        <TimePicker
+                                            onChange={this.onReturnTimeChange}
+                                            format='h:mm aa'
+                                            value={this.state.return_time}
+                                        />
+                                        </Col>
+                                        </Row>
+                                       
+                                          
                                         <Button style={{margin:'20px'}} type='submit' > Conform Booking </Button>
                                     </AvForm>
                                 </CardBody>

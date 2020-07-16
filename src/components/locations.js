@@ -84,8 +84,8 @@ class MapApp extends Component {
         <h2 className="services wow zoomInDown"> Locations </h2>
         <span className="underline">&nbsp;</span>
         <Row>
-          <Col sm={1}></Col>
-          <Col className="skyIn_map wow fadeInUp" sm={10}>
+          {/* <Col sm={1}></Col> */}
+          <Col className="skyIn_map wow fadeInUp" sm={12}>
             <ReactMaps
              
               directions={this.state.directions}
@@ -107,7 +107,7 @@ class MapApp extends Component {
             >
             </ReactMaps>
           </Col>
-          <Col sm={1}></Col>
+          {/* <Col sm={1}></Col> */}
         </Row>
 
 
