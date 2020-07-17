@@ -107,11 +107,11 @@ class Vehicles extends React.Component {
 
                             <img className='wow fadeInLeft imgg'  src={vehicles5}></img>
                             {/* <img src='../images/vehicle5.png'></img> */}
-                            <p style={{ textAlign: 'initial', fontWeight: 'bold', fontSize: '20px' }}>Customer Reviews</p>
+                            <p style={{ textAlign: 'initial', fontWeight: 'bold', fontSize: '18px',paddingLeft:'20px' }}>Customer Reviews</p>
                             <Carousel
                                 swipeable={false}
                                 draggable={true}
-                                showDots={true}
+                                showDots={false}
                                 responsive={responsive}
                                 ssr={true} // means to render carousel on server-side.
                                 infinite={true}
@@ -121,7 +121,7 @@ class Vehicles extends React.Component {
                                 customTransition="all .5"
                                 transitionDuration={500}
                                 containerClass="carousel-container"
-                                removeArrowOnDeviceType={["tablet", "mobile"]}
+                                removeArrowOnDeviceType={["tablet", "mobile","desktop"]}
                                 deviceType={this.props.deviceType}
                                 dotListClass="custom-dot-list-style"
                                 itemClass="carousel-item-padding-50-px"
@@ -153,14 +153,14 @@ class Vehicles extends React.Component {
                             </Carousel>
                         </Col>
                         <Col sm={4}>
-                            <p style={{ backgroundColor: '#ffe599', padding: '20px', fontFamily: 'inherit', fontSize: '25px', fontWeight: 'bolder', color: 'red' }}> Santro 1.1 MT Asta </p>
-                            <p>12 Hours Booking</p>
+                            <p style={{ backgroundColor: '#ffe599', padding: '10px', fontFamily: 'inherit', fontSize: '20px', fontWeight: 'bolder', color: 'red',marginBottom:'10px' }}> Santro 1.1 MT Asta </p>
+                            <p style={{marginBottom: '0.3rem'}}>12 Hours Booking</p>
                             <Table striped>
                                 <thead >
                                 </thead>
                                 <tbody>
                                     <tr >
-                                        <th className="tableAlign" scope="row">80 Km</th>
+                                        <th className="tableAlign"  scope="row">80 Km</th>
                                         <td className="tableAlign">900 Rs</td>
                                     </tr>
                                     <tr>
@@ -174,7 +174,7 @@ class Vehicles extends React.Component {
                                     </tr>
                                 </tbody>
                             </Table>
-                            <p>24 Hours Booking</p>
+                            <p style={{marginBottom: '0.3rem'}}>24 Hours Booking</p>
                             <Table striped>
                                 <thead >
                                 </thead>
@@ -194,7 +194,7 @@ class Vehicles extends React.Component {
                                     </tr>
                                 </tbody>
                             </Table>
-                            <p>EXTRA</p>
+                            <p style={{marginBottom: '0.3rem'}}>EXTRA</p>
                             <Table striped>
                                 <thead >
                                 </thead>

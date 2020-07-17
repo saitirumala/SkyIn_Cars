@@ -128,7 +128,7 @@ const returnDate = moment(date).format('DD MM YYYY h:mm a')
                             <Carousel
                                 swipeable={ true}
                                 draggable={true}
-                                showDots={true}
+                                showDots={false}
                                 responsive={responsive}
                                 ssr={true} // means to render carousel on server-side.
                                 infinite={true}
@@ -138,32 +138,37 @@ const returnDate = moment(date).format('DD MM YYYY h:mm a')
                                 customTransition="all .5"
                                 transitionDuration={1000}
                                 containerClass="carousel-container"
-                                removeArrowOnDeviceType={["tablet", "mobile"]}
+                                removeArrowOnDeviceType={["tablet", "mobile","desktop"]}
                                 deviceType={this.props.deviceType}
                                 dotListClass="custom-dot-list-style"
                                 itemClass="carousel-item-padding-50-px"
                             >
-
                                 <div>
-                                   <p className='cotashans'>No Deposit to pay for vehicle rental</p> 
-                                    <img className='imgg' src={vehicle1}></img></div>
+                                    <img className='imgg' src={vehicle1}></img>
+                                    <p className='cotashans'>No Deposit to pay for vehicle rental</p> 
+                                </div>
+                                <div>
+                                    <img className='imgg' src={bike1}></img>
+                                </div>
+                                
                                 <div>
                                 <p className='cotashans'>Best Bike and Car rental service in the city</p>
-                                    <img className='imgg' src={bike1}></img></div>
-                                <div>
-                                <p className='cotashans'>low cost rentals for the best experience</p> 
-                                    
                                     <img className='imgg' src={vehicle2}></img> </div>
                                 {/* <div><img src={bike2}></img></div> */}
                                 {/* <div><img src={bike5}></img></div> */}
                                 <div>
+                                <p className='cotashans'>No Deposit to pay for vehicle rental</p> 
+                                    <img className='imgg' src={vehicle3}></img> 
+                                </div>
                                
-                                    <img className='imgg' src={vehicle3}></img> </div>
                                 {/* <div><img src={bike3}></img></div> */}
                                 <div>
-                                <p className='cotashans'>No Deposit to pay for vehicle rental</p> 
-                                    <img className='imgg' src={vehicle4}></img> </div>
-                                <div><img className='imgg' src={bike4}></img> </div>
+                                    <img className='imgg' src={vehicle4}></img> 
+                                </div>
+                                
+                                <div>
+                                <p className='cotashans'>low cost rentals for the best experience</p>
+                                    <img className='imgg' src={bike4}></img> </div>
 
 
                             </Carousel>
@@ -171,7 +176,7 @@ const returnDate = moment(date).format('DD MM YYYY h:mm a')
                         <Col xs='12' sm='12' md='4' lg='4'>
 
                             <Card className='cardbody wow zoomIn' body>
-                                <CardTitle style={{fontFamily:'initial',fontSize:'30px',fontWeight:'bold'}}><i className="fa fa-car"></i>&nbsp;Advance Booking <i className="fa fa-motorcycle"></i></CardTitle>
+                                <CardTitle  className="formTitle" ><i className="fa fa-car"></i>&nbsp;Advance Booking <i className="fa fa-motorcycle"></i></CardTitle>
                                 <CardBody style={{paddingBottom:'0px'}}>
                                     <AvForm onValidSubmit={this.onClick} >
                                         
@@ -253,16 +258,18 @@ const returnDate = moment(date).format('DD MM YYYY h:mm a')
                                       
                                         
                                         <Row>
-                                            <Col sm={6}>
-                                            <Label>Pick Up Time</Label>
+                                            <Col style={{padding:'0px'}}lg={6} xl={6} sm={12} xs={12}>
+                                            <Label style={{color:'#757171'}}>Pick Up Time</Label>
                                                  <TimePicker
+                                                 className="timepicker"
                                             onChange={this.onPickTimeChange}
                                             format='h:mm aa'
                                             value={this.state.pickUp_time}
                                         /></Col>
-                                        <Col sm={6}>
-                                            <Label>Return Time</Label>
+                                        <Col style={{padding:'0px'}}lg={6} xl={6} sm={12} xs={12}>
+                                            <Label style={{color:'#757171'}}>Return Time</Label>
                                         <TimePicker
+                                            className="timepicker"
                                             onChange={this.onReturnTimeChange}
                                             format='h:mm aa'
                                             value={this.state.return_time}

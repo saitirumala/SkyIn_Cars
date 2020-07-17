@@ -15,7 +15,7 @@ import {Col,Row,Card, CardBody, CardTitle,CardText } from 'reactstrap';
                     <Row>
                         <Col sm={8}>
                         <Card className="cotactCard" body>
-                            <CardTitle className='service_title'></CardTitle>
+                            {/* <CardTitle className='service_title'></CardTitle> */}
                             <CardText>
                                 <p style={{textAlign:'justify',fontWeight:'900'}}>You have any questions or need additional information?</p>
                                 <p style={{textAlign:'justify'}}><span style={{color:'#ffbf00',fontWeight:'900'}}>ADDRESS:</span> #19-6-20/2,
@@ -38,7 +38,7 @@ Tirupathi-517501.</p>
                         </Card>
                         </Col>
                         <Col sm={4}>
-                        <Card className='helpLineCard wow fadeInLeft' body>
+                        <Card className='helpLineCard wow fadeInLeft'  body>
                             <Col sm={12}>
                                 <Row>
                                     <Col sm={4}>
@@ -46,14 +46,15 @@ Tirupathi-517501.</p>
                                     </Col>
                                     <Col sm={8}>
                                         <h2 style={{color:'#ffbf00',fontFamily:'initial'}}>Help line</h2>
-                                        <p><span>Booking and Service</span></p>
+                                        <p><span>Queries on Bookings and Services</span></p>
                                         <p><span>Phone :</span> +91 7674905852</p>
+                                        <img className=" fb wow bounceInDown" src={gmail} ></img><a style={{display:'flex',paddingTop:'10px',paddingLeft:'10px'}} href='https://www.facebook.com/skyin_cars-2327401060804955/'>skyinselfdrive@gmail.com</a>
                                     </Col>
                                 </Row>
                             </Col>
                         </Card>
                         <br></br>
-                        <Card className='helpLineCard wow fadeInLeft' body>
+                        {/* <Card className='helpLineCard wow fadeInLeft' body>
                             <Col sm={12}>
                                 <Row>
                                     <Col sm={4}>
@@ -66,7 +67,7 @@ Tirupathi-517501.</p>
                                     </Col>
                                 </Row>
                             </Col>
-                        </Card>
+                        </Card> */}
                         </Col>
                     </Row>
                 </Col>

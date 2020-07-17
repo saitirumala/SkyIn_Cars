@@ -8,6 +8,7 @@ import Vehicles from './components/vehicles';
 import Blog from './components/blog';
 import Locations from './components/locations';
 import Contact from './components/contact';
+import Footer from './components/footer';
 import { Route, Redirect, Switch,} from "react-router-dom";
 function App() {
   return (
@@ -50,6 +51,7 @@ function App() {
           >
       <Contact></Contact>
       </section>
+      <Footer></Footer>
     </div>
   );
 }

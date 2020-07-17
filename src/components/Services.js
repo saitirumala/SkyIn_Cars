@@ -11,17 +11,18 @@ class Services extends React.Component {
                 <h2 className="services wow bounceInDown">Services</h2>
                 <span className="underline">&nbsp;</span>
                 <Row>
-                    <Col className='wow slideInLeft' sm="6">
+                    <Col className='wow slideInLeft serviceContent' lg={6} xl={6} sm={12} xs={12}>
                         <Card className='card_Body ' body>
                             <CardTitle className='service_title'><sapn className='plus'>+&nbsp;</sapn>Mobile Phone Reservation</CardTitle>
-                            <CardText>With supporting text below as natural lead-in to additional content.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed nonumy eirmod tempor invidunt ut labore et dolore magnaed aliquyam erat, 
+                            <CardText >With supporting text below as natural lead-in to additional content.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed nonumy eirmod tempor invidunt ut labore et dolore magnaed aliquyam erat, 
                                 sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.</CardText>
                         </Card>
                     </Col>
-                    <Col sm="6" className='wow slideInRight'>
+                    
+                    <Col lg={6} xl={6} sm={12} xs={12} className='wow slideInRight serviceContent'>
                         <Card className='card_Body ' body>
                         <CardTitle className='service_title'><sapn className='plus'>+&nbsp;</sapn>
-Documents Required To Take CAR</CardTitle>
+Documents Required</CardTitle>
                             <CardText>
                                 <ul style={{textAlign:'initial'}}>
                                     <li>Original Driving License</li>
@@ -35,20 +36,20 @@ Documents Required To Take CAR</CardTitle>
                         </Card>
                     </Col>
                 </Row>
-                <br></br><br></br>
+               
                 <Row>
-                    <Col className='wow slideInLeft' sm="6">
+                    <Col className='wow slideInLeft serviceContent ' lg={6} xl={6} sm={12} xs={12} >
                         <Card className='card_Body' body>
                             <CardTitle className='service_title'><sapn className='plus'>+&nbsp;</sapn>Unlimited Miles Car Rental</CardTitle>
-                            <CardText>With supporting text below as a natural lead-in to additional content.Lorem ipsum dolor sit amet, 
+                            <CardText >With supporting text below as a natural lead-in to additional content.Lorem ipsum dolor sit amet, 
                                 consetetur sadipscing elitr, sed nonumy eirmod tempor invidunt ut labore et dolore magnaed aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.</CardText>
 
                         </Card>
                     </Col>
-                    <Col className='wow slideInRight' sm="6">
+                    <Col className='wow slideInRight serviceContent' lg={6} xl={6} sm={12} xs={12} >
                         <Card className='card_Body' body>
                             <CardTitle className='service_title'><sapn className='plus'>+&nbsp;</sapn>One Way Car Rentals</CardTitle>
-                            <CardText>With supporting text below as a natural lead-in to additional content.Lorem ipsum dolor sit amet, 
+                            <CardText >With supporting text below as a natural lead-in to additional content.Lorem ipsum dolor sit amet, 
                                 consetetur sadipscing elitr, sed nonumy eirmod tempor invidunt ut labore et dolore magnaed aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.</CardText>
 
                         </Card>

@@ -15,7 +15,8 @@ import {
 } from 'reactstrap';
 import WOW from 'wowjs';
 import { Link, animateScroll as scroll } from "react-scroll";
-import contactLogo from '../images/contactLogo.png'
+import contactLogo from '../images/contactLogo.png';
+import logo from '../images/skyinLogo.jpeg'
 
 const Example = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,8 +29,8 @@ const Example = (props) => {
   return (
     <div>
       <Navbar style={{backgroundColor:'white',height:'130px'}} fixed='top' expand="md" tabs>
-        <NavbarBrand className='title wow flip' data-wow-iteration='infinite' data-wow-duration='3s'>SkyIn<br></br> <p style={{fontSize:'20px',marginBottom:'0px',borderTop:'2px solid yellow',borderBottom:'2px solid yellow'}}>Cars & Bikes</p> <p style={{color:'black',fontSize:'35px'}}>Rentals</p></NavbarBrand>
-        <NavbarToggler onClick={toggle} />
+  <NavbarBrand className='title wow flipInX' data-wow-iteration='infinite' data-wow-duration='3s'><img className='navlogo' src={logo}></img></NavbarBrand>
+        <NavbarToggler onClick={toggle} style={{backgroundColor:'#ffbf00'}} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className=" navbarClass mr-auto" navbar>
             <NavItem className='cursor navcol'>
